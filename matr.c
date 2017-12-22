@@ -12,7 +12,7 @@ m=rand() %5 +3;
 n=rand() %5 +4;
 printf("Strings:%d, Columns:%d\n\n",m,n);
 int mas[m][n];
-for(i=0;i<m;i++)
+for(i=0;i<m;i++) /* Create an array */
 {
     for(j=0;j<n;j++)
     {
@@ -25,13 +25,13 @@ printf("\n\n\n");
 /*-----------------------------------------*/
 /* 2 exercise */
 int k;
-for(j=0;j<n;j++)
+for(j=0;j<n;j++) /* Swap the first and last lines and deploy them */
 {
     k=mas[0][j];
     mas[0][j]=mas[m-1][n-j-1];
     mas[m-1][n-j-1]=k;
 }
-for(i=0;i<m;i++)
+for(i=0;i<m;i++) /* The output of the resulting array */
 {
     for(j=0;j<n;j++)
     {
@@ -45,7 +45,7 @@ printf("\n\n\n");
 int mas2[m-1][n-1];
 int min, min_str, min_col,x,y;
 min=501;
-for(i=0;i<m;i++)
+for(i=0;i<m;i++) /* Finding the minimal element */
 {
     for(j=0;j<n;j++)
        {
@@ -63,7 +63,7 @@ i=0;
 j=0;
 x=0;
 y=0;
-while(i<m)
+while(i<m) /* Delete the string and column at the intersection of which is the smallest element of the array */
 {
     if(i!=min_str)
     {
@@ -103,7 +103,7 @@ int b;
 b=0;
 i=0;
 j=0;
-while((a=getchar()) !='.')
+while((a=getchar()) !='.') /* Create an array manually */
 {
     if(a>='0' && a<='9')
         b=b*10+a - '0';
@@ -126,15 +126,15 @@ while((a=getchar()) !='.')
 printf("\n\n\n");
 /*-------------------------------------------*/
 /* 5 exercise*/
-if(n!=i+1)
+if(n!=i+1) /* Checking the number of columns of one matrix with the number of rows of another matrix */
 {
-    printf("The number of columns should equal the number of rows of the old matrix!");
+    printf("The number of columns should equal the number of strings of the old matrix!");
     return 1;
 }
 int z,q;
 z=j;
 int mas_mas[m][z];
-for(i=0;i<m;i++)
+for(i=0;i<m;i++) /* Multiplication of matrices */
 {
     for(j=0;j<z;j++)
     {
